@@ -38,6 +38,9 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/styles/cities-shared.css" />
     <link rel="stylesheet" href="/styles/izmir.css" />
+    <!-- JavaScript -->
+    <script src="js/shared.js" defer></script>
+    <script src="js/izmir.js" defer></script>
 
     <title>Travel Page</title>
   </head>
@@ -53,7 +56,39 @@
           <!--Add an About page -->
         </ul>
       </nav>
+      <a href="#side-drawer" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </header>
+    <!--Side Drawer -->
+    <aside id="side-drawer">
+      <header>
+        <a href="#" class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/places.html">Destinations</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- The Fullscreen Image Modal -->
+    <aside id="myModal" class="modal">
+      <!--JavaScript-->
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </aside>
     <main>
       <section id="hero">
         <!-- Hero-Image : is an image which captures all the attention -->
@@ -72,9 +107,18 @@
             unique blend of <strong>ancient wonders</strong>,
             <strong>beautiful beaches</strong>, lively festivals, and vibrant
             nightlife. From the
-            <a href="#ephesus">ancient city of Ephesus</a> to the lively streets
-            of <a href="#alsancak">Alsancak</a>, Izmir is full of places to
-            explore and <em>moments to cherish</em>.
+            <span
+              class="fullscreen-img"
+              data-img-src="img/places/izmir/ephesus-trip.jpg"
+              >ancient city of Ephesus</span
+            >
+            to the lively streets of
+            <span
+              class="fullscreen-img"
+              data-img-src="img/places/izmir/alsancak.webp"
+              >Alsancak</span
+            >, Izmir is full of places to explore and
+            <em>moments to cherish</em>.
           </p>
 
           <p>
@@ -101,11 +145,16 @@
             <div class="item-content">
               <h2>İzmir Clock Tower: A Timeless Landmark</h2>
               <p>
-                Located at the heart of <strong>Konak Square</strong>, the
-                <strong>İzmir Clock Tower</strong> stands as one of the city’s
-                most iconic symbols. Built in <strong>1901</strong> to celebrate
-                the 25th anniversary of <em>Sultan Abdulhamid II’s</em> reign,
-                this beautiful, intricately designed clock tower has become a
+                Located at the heart of <strong>Konak Square</strong>, the<span
+                  class="fullscreen-img"
+                  data-img-src="img/places/izmir/izmir-clock-tower2.jpeg"
+                >
+                  <strong>Izmir Clock Tower</strong></span
+                >
+                stands as one of the city’s most iconic symbols. Built in
+                <strong>1901</strong> to celebrate the 25th anniversary of
+                <em>Sultan Abdulhamid II’s</em> reign, this beautiful,
+                intricately designed clock tower has become a
                 <strong>must-visit</strong> for anyone exploring İzmir. The
                 tower, standing at <strong>25 meters high</strong>, boasts
                 <em>Ottoman architecture</em>
@@ -163,14 +212,26 @@
               <div class="item-content">
                 <p>
                   Highlights of <strong>Ephesus</strong> include the majestic
-                  <strong>Library of Celsus</strong>, the
-                  <strong>Great Theater</strong> with a capacity of
-                  <strong>25,000 seats</strong>, and the
-                  <span id="img-artemis-tmeple">Temple of Artemis</span> </a> —one of the
-                  <em>Seven Wonders of the Ancient World</em>. Walking through
-                  its <strong>marble streets</strong>, you’ll find
-                  <strong>temples</strong>, ancient <strong>baths</strong>, and
-                  even a <strong>Roman-era public restroom</strong>, each
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-efes-gece.jpg"
+                    ><strong>Library of Celsus</strong></span
+                  >, the
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-ephesus-theater.jpeg"
+                    ><strong>Great Theater</strong></span
+                  >
+                  with a capacity of <strong>25,000 seats</strong>, and the
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/temple-of-artemis.webp"
+                    >Temple of Artemis</span
+                  >
+                  —one of the <em>Seven Wonders of the Ancient World</em>.
+                  Walking through its <strong>marble streets</strong>, you’ll
+                  find <strong>temples</strong>, ancient <strong>baths</strong>,
+                  and even a <strong>Roman-era public restroom</strong>, each
                   telling stories of a bygone era. Ephesus is a
                   <strong>must-see destination</strong> for history enthusiasts
                   and anyone looking to experience the grandeur of ancient
@@ -213,8 +274,22 @@
                 <strong>Kemeraltı</strong> is also home to charming
                 <strong>coffeehouses</strong>, Turkish delight shops, and
                 authentic eateries where visitors can sample local favorites
-                like <em>“kumru” sandwiches</em> and <em>“boyoz” pastries</em>.
-                Beyond shopping, it offers a window into
+                like
+                <em
+                  >“<span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/kumru-yemek.webp"
+                    >Kumru</span
+                  >” sandwiches</em
+                >
+                and
+                <em
+                  >"<span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/boyoz-yemek.jpg"
+                    >Boyoz</span
+                  >" pastries</em
+                >. Beyond shopping, it offers a window into
                 <strong>İzmir’s culture and heritage</strong>, making it a
                 <strong>must-visit destination</strong>
                 for anyone exploring the city.
@@ -236,11 +311,16 @@
                 </h2>
                 <p>
                   The <strong>Historical Elevator</strong>, or
-                  <em>"Tarihi Asansör"</em>, is a cherished icon of İzmir,
-                  offering not only <strong>breathtaking views</strong> but also
-                  a captivating tale of <em>connection</em> and
-                  <em>culture</em>. Built in <strong>1907</strong> by the
-                  influential Jewish businessman
+                  <em
+                    >"<span
+                      class="fullscreen-img"
+                      data-img-src="img/places/izmir/izmir-asansor2.jpg"
+                      >Tarihi Asansör</span
+                    >"</em
+                  >, is a cherished icon of İzmir, offering not only
+                  <strong>breathtaking views</strong> but also a captivating
+                  tale of <em>connection</em> and <em>culture</em>. Built in
+                  <strong>1907</strong> by the influential Jewish businessman
                   <strong>Nesim Levi Bayraklıoğlu</strong>, this elevator
                   originally served to bridge two distinct neighborhoods—<strong
                     >Karataş</strong
@@ -254,8 +334,13 @@
 
                 <p>
                   Adding to its charm is the legacy of
-                  <strong>Dario Moreno</strong>, a famed
-                  <strong>singer, musician,</strong> and
+                  <strong
+                    ><span
+                      class="fullscreen-img"
+                      data-img-src="img/places/izmir/izmir-Dario-Moreno-Harcourt-1952.jpg"
+                      >Dario Moreno</span
+                    ></strong
+                  >, a famed <strong>singer, musician,</strong> and
                   <strong>actor</strong> who grew up in the vibrant
                   <strong>Karataş district</strong>. Born into a modest Jewish
                   family, Moreno rose to international fame, and his
@@ -267,14 +352,28 @@
                   connection to the <strong>Historical Elevator</strong>, which
                   he often used as a boy, became so iconic that the street
                   leading to the elevator was later named
-                  <em>“Dario Moreno Street”</em>
+                  <em
+                    >“<span
+                      class="fullscreen-img"
+                      data-img-src="img/places/izmir/izmir-Dario-Moreno-Street.jpg"
+                      >Dario Moreno Street</span
+                    >”</em
+                  >
                   in his honor.
+                </p>
+                <p>
+                  <small
+                    >Fun fact: Dario Moreno's impact on İzmir's music scene is
+                    still felt today, with many of his songs remaining beloved
+                    classics in Turkish culture.</small
+                  >
                 </p>
               </div>
             </div>
             <div class="image-item-content , reverse">
               <div class="image">
-                <img class="horizontal-images"
+                <img
+                  class="horizontal-images"
                   src="img/places/izmir/izmir-dario-moreno.jpg"
                   alt="A photo of Dario Moreno"
                 />
@@ -282,39 +381,18 @@
               </div>
               <div class="item-content">
                 <p>
-                  Adding to its charm is the legacy of
-                  <strong>Dario Moreno</strong>, a famed
-                  <strong>singer, musician,</strong> and
-                  <strong>actor</strong> who grew up in the vibrant
-                  <strong>Karataş district</strong>. Born into a modest Jewish
-                  family, Moreno rose to international fame, and his
-                  music—characterized by his <em>rich voice</em> and
-                  <em>heartfelt delivery</em>—brought a touch of İzmir to
-                  audiences around the world. Even as he gained recognition
-                  abroad, he remained deeply connected to İzmir and to the
-                  Karataş neighborhood, where he spent his childhood. His
-                  connection to the <strong>Historical Elevator</strong>, which
-                  he often used as a boy, became so iconic that the street
-                  leading to the elevator was later named
-                  <u>“Dario Moreno Street”</u>
-                  in his honor.
-                  <br />
-                  <small
-                    >Fun fact: Dario Moreno's impact on İzmir's music scene is
-                    still felt today, with many of his songs remaining beloved
-                    classics in Turkish culture.</small
-                  >
-                </p>
-
-                <p>
                   Today, visitors can walk up
                   <strong>Dario Moreno Street</strong> and feel the echoes of
                   his legacy, enjoying the nostalgic <strong>cafés</strong> and
-                  small <strong>artisan shops</strong> along the way. The
-                  elevator’s <strong>observation terrace</strong> offers a
-                  sweeping view of İzmir’s coastline, where locals and tourists
-                  alike can imagine the city as Moreno saw it, and listen to his
-                  music in the very place he once called home.
+                  small <strong>artisan shops</strong> along the way.
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-asansor-teras.jpg"
+                    >The elevator’s <strong>observation terrace</strong></span
+                  >
+                  offers a sweeping view of İzmir’s coastline, where locals and
+                  tourists alike can imagine the city as Moreno saw it, and
+                  listen to his music in the very place he once called home.
                   <br />
                   <small
                     >Fun fact: Many visitors bring their own speakers to play
@@ -345,25 +423,42 @@
                 <strong>Alaçatı</strong>, located on the
                 <strong>Çeşme Peninsula</strong> near İzmir, is a picturesque
                 coastal town celebrated for its stunning
-                <strong>stone houses</strong>, vibrant
-                <strong>bougainvillea-lined streets</strong>, and breezy
-                <strong>Mediterranean atmosphere</strong>. Known as one of
-                Turkey’s most beautiful and iconic towns,
+                <strong>
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-alaçatı-taş-ev.webp"
+                    >stone houses</span
+                  ></strong
+                >, vibrant
+                <strong
+                  ><span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-alaçatı4.jpeg"
+                    >bougainvillea-lined streets</span
+                  ></strong
+                >, and breezy <strong>Mediterranean atmosphere</strong>. Known
+                as one of Turkey’s most beautiful and iconic towns,
                 <strong>Alaçatı</strong> offers a unique blend of
                 <em>history</em>, <em>culture</em>, and seaside relaxation that
                 draws visitors from around the world.
               </p>
 
               <p>
-                Originally a <strong>Greek settlement</strong>,
                 <strong>Alaçatı’s</strong> historic architecture,
                 <strong>cobbled streets</strong>, and
-                <strong>windmills</strong> retain the character and charm of a
-                bygone era. The town has become a popular destination for both
-                local and international travelers, not only for its beauty but
-                also for its <em>bohemian vibe</em> and
-                <em>lively atmosphere</em>. It’s especially renowned for its
-                <strong>cafes</strong>, <strong>boutique hotels</strong>, and
+                <strong
+                  ><span
+                    class="fullscreen-img"
+                    data-img-src="img/places/izmir/izmir-alaçatı-windmills.webp"
+                    >windmills</span
+                  ></strong
+                >
+                retain the character and charm of a bygone era. The town has
+                become a popular destination for both local and international
+                travelers, not only for its beauty but also for its
+                <em>bohemian vibe</em> and <em>lively atmosphere</em>. It’s
+                especially renowned for its <strong>cafes</strong>,
+                <strong>boutique hotels</strong>, and
                 <strong>artisan shops</strong>, each offering
                 <em>unique</em> and <em>authentic experiences</em>.
               </p>
@@ -374,9 +469,19 @@
                 <strong>kitesurfing spots</strong>, thanks to its strong, steady
                 winds and shallow <strong>turquoise waters</strong>. Visitors
                 can enjoy a range of <em>water sports</em> or relax on nearby
-                beaches like <strong>Ilıca</strong> and
-                <strong>Delikli</strong>, known for their
-                <em>crystal-clear waters</em> and <em>sandy shores</em>.
+                beaches like
+                <span
+                  class="fullscreen-img"
+                  data-img-src="img/places/izmir/izmir-ilica-plaji.jpg"
+                  ><strong>Ilıca</strong> beach</span
+                >
+                and
+                <span
+                  class="fullscreen-img"
+                  data-img-src="img/places/izmir/izmir-delikli-koy-plajı .jpeg"
+                  ><strong>Delikli</strong> beach</span
+                >, known for their <em>crystal-clear waters</em> and
+                <em>sandy shores</em>.
               </p>
 
               <p>
