@@ -9,7 +9,7 @@ body {
 
 /*-------------------INTRODUCTION---------------------*/
 #city-introduction {
-  background: linear-gradient(180deg, rgb(50, 51, 51) , rgb(88, 113, 116));
+  background: linear-gradient(180deg, rgb(50, 51, 51), rgb(88, 113, 116));
 
   padding: 4rem;
 }
@@ -20,6 +20,16 @@ body {
 }
 
 /*---------------------CONTENT------------------------*/
+
+.fullscreen-img {
+  color: rgb(42, 7, 146);
+  font-weight: bold;
+}
+
+.fullscreen-img:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 #cities-beauties {
   margin: 0 auto;
@@ -52,8 +62,101 @@ body {
   margin: 2rem 0 2rem 0;
 }
 
+#row-images img {
+  margin: 0.5rem;
+}
+
 .item-content {
   margin: 1.5rem 2rem;
+}
+
+/*-------------------The Fullscreen Image Modal--------------------*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 }
 
 /*----------IMG-&-FIGURE-----------*/
@@ -65,7 +168,6 @@ body {
 
 .image img {
   object-fit: cover;
-  
 }
 
 .image:hover {
@@ -104,7 +206,7 @@ figcaption {
 
 /*--------------------TABLE------------------*/
 
-.styled-table{
+.styled-table {
   color: black;
 }
 
@@ -126,7 +228,7 @@ figcaption {
 
 .styled-table th,
 .styled-table td {
-  padding: 12px 15px;
+  padding: 0.75rem 0.9375rem;
 }
 
 .styled-table tbody tr {
@@ -152,4 +254,116 @@ figcaption {
 .styled-table tbody tr.active-row {
   font-weight: bold;
   color: #009879;
+}
+
+/*----------Media-Queries------------*/
+
+@media (max-width: 64rem) {
+  /*1024px*/
+  #hero-content {
+    width: 80%;
+  }
+
+  #hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .item-content {
+    margin: 1.5rem 1.5rem;
+  }
+
+  /*----MAIN CONTENT-----*/
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+  main li img {
+    width: 14.5rem;
+    height: 24rem;
+  }
+
+  .horizontal-images {
+    width: 15.5rem;
+  }
+  .styled-table {
+    width: 95%;
+  }
+}
+
+@media (max-width: 48.5rem) {
+  /*768px*/
+
+  #hero-content {
+    width: 90%;
+  }
+
+  #hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero-content p {
+    font-size: 1.25rem;
+  }
+
+  #hero-content a {
+    font-size: 1rem;
+  }
+
+  .destination {
+    margin: 0 0.4rem;
+  }
+  /*----MAIN CONTENT-----*/
+  #city-introduction {
+    padding: 0.2rem 0.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  main li img {
+    width: 10.5rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  /*480px*/
+  .image-item-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .item-content {
+    margin: 0rem 1rem;
+  }
+
+  main li img {
+    width: 14.5rem;
+    height: 24rem;
+  }
+
+  #row-images {
+    margin: 2rem 0 2rem 0;
+    justify-content: center;
+  }
+
+  #row-images img {
+    width: 6rem;
+    height: 18rem;
+    margin: 0.2rem;
+  }
+
+  .styled-table {
+    min-width: 18rem;
+  }
 }

@@ -16,23 +16,31 @@ header nav a:hover {
   color: rgb(59, 59, 59);
 }
 
+.menu-btn span {
+  background-color: rgb(183, 230, 235);
+}
+
 #hero {
-  height: 800px;
+  height: 50rem;
   background-image: url("/img/places/izmir/izmir-saat-kulesi3.jpg");
   background-position: center;
   background-size: cover; /*img will cover the entire element*/
 }
 
 #hero-content {
-  width: 900px;
+  width: 56.25rem;
   background-color: rgba(51, 47, 47, 0.8);
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
   border-radius: 8px;
   text-align: center;
-  padding: 50px 0;
+  padding: 3.125rem 0;
   margin: 0 auto;
   position: relative;
-  top: 200px;
+  top: 12.5rem;
+}
+
+.hero-content-display-none {
+  display: none;
 }
 
 #hero-content h1 {
@@ -45,15 +53,15 @@ header nav a:hover {
 #hero-content p {
   color: white;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
-h2{
+h2 {
   font-size: 2.5rem;
 }
 
-p{
+p {
   font-size: 1.5rem;
 }
