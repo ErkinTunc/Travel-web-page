@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(0deg, rgb(202, 243, 240), rgb(66 94 193));
+}
+
 #hero {
   height: 50rem;
   background-image: url("/img/hero-images/women-on-the-middle-of-the-beach.jpg");
@@ -121,4 +125,9 @@
   .destination {
     margin: 0 0.4rem;
   }
+}
+
+/*------- Styles for the noscript warning------- */
+.noscript-warning {
+  margin: 5rem auto 0rem auto;
 }

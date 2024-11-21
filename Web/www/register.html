@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <!--My styles-->
+    <link rel="stylesheet" href="/styles/shared-normalize.css" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/forms/forms-shared.css" />
+    <link rel="stylesheet" href="/styles/forms/register.css">
+    <!-- JavaScript -->
+    <script src="js/forms/register.js" defer></script>
+    <title>Travel Page</title>
+  </head>
+  <body>
+    <header>
+      <div id="page-logo">
+        <a href="/index.html">Travel Goals</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/places.html">Destinations</a></li>
+          <li><a href="/about.html">About</a></li>
+          <!--Add an About page -->
+        </ul>
+      </nav>
+      <a href="#side-drawer" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </header>
+    <aside id="side-drawer">
+      <header>
+        <a href="#" class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/places.html">Destinations</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- NoScript -->
+    <aside>
+      <noscript>
+        <div class="noscript-warning">
+          <p>
+            JavaScript is disabled in your browser. Please enable it to fully
+            enjoy this website.
+          </p>
+        </div>
+      </noscript>
+    </aside>
+    <main>
+      <h1>REGISTER</h1>
+      <form
+        method="POST"
+        action="htbin/register.py"
+        id="registration-form"
+        novalidate
+      >
+        <section>
+          <ul>
+            <li>
+              <label for="username">Your username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                minlength="6"
+              />
+            </li>
+
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="text" name="useremail" id="useremail" required />
+            </li>
+
+            <li>
+              <label for="userpwd">Your password</label>
+              <input type="text" name="userpwd" id="userpwd" required />
+            </li>
+            <li>
+              <label for="firstname">Your First name</label>
+              <input type="text" name="firstname" id="firstname" required />
+            </li>
+            <li>
+              <label for="lastname">Your Last name</label>
+              <input type="text" name="lastname" id="lastname" required />
+            </li>
+            <li>
+              <label for="lastname">Your Birthdate</label>
+              <input
+                type="text"
+                name="birthdate"
+                id="birthdate"
+                placeholder="dd/mm/yyyy"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <section class="form-buttons">
+          <button>Register</button>
+          <button type="reset">Clear</button>
+        </section>
+      </form>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/">
+            <img src="/img/icons/insta.png" alt="instagram-logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/">
+            <img src="/img/icons/facebook.png" alt="facebook" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
