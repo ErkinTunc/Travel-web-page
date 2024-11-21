@@ -13,7 +13,10 @@ function sendLoginRequest(event) {
   event.preventDefault(); // Prevent sending the form
 
   // fetch Form data
-  let formData = new FormData(form);
+  let formData = new FormData(form); // creates an object, optionally fill from
+
+  // add one more field
+  formData.append("erkin", "123");
 
   // 1. Create a new XMLHttpRequest object
   let xhr = new XMLHttpRequest();
