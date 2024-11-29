@@ -1,7 +1,7 @@
 let form = document.getElementById("registration-form");
-
 let inputUsername = document.getElementById("username");
 let inputPassword = document.getElementById("userpwd");
+let messageArea = document.getElementById("message-area");
 
 //console.dir
 console.dir(form);
@@ -35,7 +35,6 @@ function sendLoginRequest(event) {
       let response = xhr.response;
 
       // Show the login response message
-      let messageArea = document.getElementById("message-area");
       messageArea.textContent = response;
 
       // Login response choices (Logged/not-logged)
@@ -61,6 +60,10 @@ function sendLoginRequest(event) {
   xhr.onerror = function () {
     console.error("Request failed");
   };
+}
+
+function submitEnterKey(event) {
+  
 }
 
 // Event Listeners

@@ -187,9 +187,9 @@ SendForm = function (event) {
     VerifyFirstNameFields() &&
     VerifyLastNameFields();
 
-  let emailIsValid = VerifyBirthdate(); /* Could be empty */
+  let birthdateIsValid = VerifyBirthdate(); /* Could be empty */
 
-  isValid = isValid && emailIsValid;
+  isValid = isValid && birthdateIsValid;
 
   // Show results on Console
   console.log("-----------------------------");
@@ -199,7 +199,7 @@ SendForm = function (event) {
   console.log("password:", VerifyPassword());
   console.log("firstName:", VerifyFirstNameFields());
   console.log("lastName:", VerifyLastNameFields());
-  console.log("birthdate:", emailIsValid); /*if it is written wrong it is false*/
+  console.log("birthdate:", birthdateIsValid); /*if it is written wrong it is false*/
 
   if (!isValid) {
     event.preventDefault(); // Prevent sending the form
