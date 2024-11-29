@@ -1,0 +1,44 @@
+h1 {
+  color: black;
+}
+
+p {
+  margin: 4px 0px 10px;
+}
+
+#chat-box {
+  width: 30rem;
+  margin: 2rem auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  /*container with darker coller*/
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+form {
+  width: 98%;
+  margin: auto 1%;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 0;
+}
+
+textarea {
+  resize: none;
+}
+
+form button{
+    margin: 1rem auto;
+}
