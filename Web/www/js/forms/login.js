@@ -38,33 +38,47 @@ function sendLoginRequest(event) {
       messageArea.textContent = response;
 
       // Login response choices (Logged/not-logged)
+      messageArea.classList.add("login-result-message");
+
       if (response.startsWith("Bonjour")) {
-        messageArea.classList.add("login-result-message");
         messageArea.classList.add("login-success");
         messageArea.classList.remove("login-failed");
 
         console.log("Login successful!");
       } else {
-        messageArea.classList.add("login-result-message");
         messageArea.classList.add("login-failed");
         messageArea.classList.remove("login-success");
 
         console.log("Login failed!");
       }
     } else {
-      console.error("Error: ", xhr.statusText);
+      messageArea.textContent = `Error: ${xhr.status} - ${xhr.statusText}`;
+      messageArea.classList.add("login-result-message", "login-failed");
+      messageArea.classList.remove("login-success");
+
+      console.error("Error: ", xhr.status, xhr.statusText);
     }
   };
 
   // catch the errors
   xhr.onerror = function () {
+    // Network Errors
+    messageArea.textContent = "Network error. Please try again later.";
+    messageArea.classList.add("login-result-message", "login-failed");
+    messageArea.classList.remove("login-success");
     console.error("Request failed");
   };
 }
 
 function submitEnterKey(event) {
-  
+  if (event.key === "Enter") {
+    event.preventDefault();
+    sendLoginRequest(event);
+  }
 }
 
 // Event Listeners
 form.addEventListener("submit", sendLoginRequest);
+/*When we are on a input field(while using "keydown") and push on a key from keyboard it activates*/
+inputUsername.addEventListener("keydown", submitEnterKey);
+inputPassword.addEventListener("keydown", submitEnterKey);
