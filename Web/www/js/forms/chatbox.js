@@ -19,7 +19,6 @@ function processMessages(responseText) {
   const messages = JSON.parse(responseText);
 
   // Update the chatbox with the retrieved messages
-  const chatbox = document.getElementById("chatbox");
   chatbox.innerHTML = ""; // Clear existing messages
 
   let i = 0;
@@ -60,13 +59,18 @@ function fetchChatMessages() {
   // Assign the state change handler
   xhr.onreadystatechange = function () {
     handleStateChange(xhr); // Pass the XMLHttpRequest object
+    let messages;
     if (xhr.readyState === 4 && xhr.status === 200) {
       try {
         // Call the separate function to handle the response
-        processMessages(xhr.responseText);
+        messages = JSON.parse(xhr.responseText);
+        processMessages(messages);
       } catch (error) {
-        console.error("Error processing messages: ", error);
+        console.error("JSON Parsing Error: ", error);
+        console.error("Raw Response: ", xhr.responseText); // Log raw response for debugging
       }
+    } else {
+      console.error("Empty or malformed response received.");
     }
   };
 
@@ -75,3 +79,4 @@ function fetchChatMessages() {
 
 // Call the function to load messages on page load
 document.addEventListener("DOMContentLoaded", fetchChatMessages);
+//setInterval(fetchChatMessages, 5000); // Fetch messages every 5 seconds
