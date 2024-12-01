@@ -199,7 +199,10 @@ SendForm = function (event) {
   console.log("password:", VerifyPassword());
   console.log("firstName:", VerifyFirstNameFields());
   console.log("lastName:", VerifyLastNameFields());
-  console.log("birthdate:", birthdateIsValid); /*if it is written wrong it is false*/
+  console.log(
+    "birthdate:",
+    birthdateIsValid
+  ); /*if it is written wrong it is false*/
 
   if (!isValid) {
     event.preventDefault(); // Prevent sending the form
@@ -207,6 +210,27 @@ SendForm = function (event) {
 
   console.log("All validations passed:", isValid);
 };
+
+// Submit form when Enter key is pressed
+function submitEnterKey(event) {
+  if (event.key === "Enter") {
+    // Prevent default behavior (e.g., form submission in certain browsers)
+    event.preventDefault();
+
+    // Check if the currently focused element is part of the form
+    if (
+      event.target === inputUsername ||
+      event.target === inputEmail ||
+      event.target === inputPassword ||
+      event.target === inputFirstName ||
+      event.target === inputLastName ||
+      event.target === inputBirthdate
+    ) {
+      // Trigger form submission validation
+      SendForm(event);
+    }
+  }
+}
 
 // Event Listeners
 inputUsername.addEventListener("input", VerifyUsername);
@@ -216,3 +240,11 @@ inputFirstName.addEventListener("input", VerifyFirstNameFields);
 inputLastName.addEventListener("input", VerifyLastNameFields);
 inputBirthdate.addEventListener("input", VerifyBirthdate);
 form.addEventListener("submit", SendForm);
+
+// Attach keydown listener to each input field
+inputUsername.addEventListener("keydown", submitEnterKey);
+inputEmail.addEventListener("keydown", submitEnterKey);
+inputPassword.addEventListener("keydown", submitEnterKey);
+inputFirstName.addEventListener("keydown", submitEnterKey);
+inputLastName.addEventListener("keydown", submitEnterKey);
+inputBirthdate.addEventListener("keydown", submitEnterKey);
