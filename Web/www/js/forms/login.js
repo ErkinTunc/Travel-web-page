@@ -33,7 +33,7 @@ function sendLoginRequest(event) {
       // Get the answer from the server
 
       let response = xhr.response;
-
+      alert(response)
       // Show the login response message
       messageArea.textContent = response;
 
@@ -72,7 +72,6 @@ function sendLoginRequest(event) {
 
 function submitEnterKey(event) {
   if (event.key === "Enter") {
-    event.preventDefault();
     sendLoginRequest(event);
   }
 }
