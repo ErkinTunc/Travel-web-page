@@ -39,6 +39,20 @@ textarea {
   resize: none;
 }
 
-form button{
-    margin: 1rem auto;
+form button {
+  margin: 1rem auto;
+}
+
+@media (max-width: 48.5rem) {
+  /*768px*/
+  #chat-box {
+    margin: 10rem auto 4rem auto;
+  }
+}
+
+@media (max-width: 30rem) {
+  /*480px*/
+  #chat-box {
+    width: 80%;
+  }
 }
