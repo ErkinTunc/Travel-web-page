@@ -34,11 +34,12 @@
     />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
     <!--My styles-->
-    <link rel="stylesheet" href="styles/shared-normalize.css" />
-    <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/forms/forms-shared.css" />
-    <link rel="stylesheet" href="styles/forms/chatbox.css" />
+    <link rel="stylesheet" href="/styles/shared-normalize.css" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/forms/forms-shared.css" />
+    <link rel="stylesheet" href="/styles/forms/chatbox.css" />
     <!-- JavaScript -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js" defer></script>
     <script src="js/forms/chatbox.js" defer></script>
     <title>Travel Page</title>
   </head>
@@ -50,8 +51,8 @@
       <nav>
         <ul>
           <li><a href="/places.html">Destinations</a></li>
-          <li><a href="/about.html">About</a></li>
-          <!--Add an About page -->
+          <li><a href="/login.html">Login</a></li>
+          <li><a href="/chatbox.html">Forum</a></li>
         </ul>
       </nav>
       <a href="#side-drawer" class="menu-btn">
@@ -75,7 +76,10 @@
             <a href="/places.html">Destinations</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="/login.html">Login</a>
+          </li>
+          <li>
+            <a href="/chatbox.html">Forum</a>
           </li>
         </ul>
       </nav>
@@ -94,7 +98,8 @@
     <main>
       <div id="chat-box">
         <h1>Chat</h1>
-        <section> <!--READ MESSAGES-->
+        <section>
+          <!--READ MESSAGES-->
           <ul id="read-messages">
             <li class="container">
               <p class="message">Message1</p>
@@ -117,7 +122,8 @@
             </li>
           </ul>
         </section>
-        <section> <!--SEND MESSAGE-->
+        <section>
+          <!--SEND MESSAGE-->
           <form action="/htbin/chatsend.py" method="POST">
             <div>
               <label for="msg">Your Message :</label>
