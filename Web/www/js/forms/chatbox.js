@@ -1,8 +1,22 @@
 const chatbox = document.getElementById("read-messages");
+const form = document.querySelector("form");
+const msgInputElement = document.getElementById("msg");
 
-console.log("hello worldd");
+// TESTING
+console.dir(chatbox);
+console.dir(form);
+console.dir(msgInputElement);
+console.log("hello world");
+
+// Error message Element
+let messageErrorPElement = document.createElement("p");
+messageErrorPElement.innerHTML = "";
+msgInputElement.parentElement.append(messageErrorPElement);
+messageErrorPElement.classList.add("errorMessage");
 
 //FUNCTIONS
+
+// HANDLE SERVER RESPONSE
 function handleStateChange(xhr) {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
@@ -13,12 +27,10 @@ function handleStateChange(xhr) {
   }
 }
 
-// Function to process and display messages
+// PROCESS AND DISPLAY MESSAGES
 function processMessages(responseText) {
-  // Parse the JSON data from the server
   const messages = JSON.parse(responseText);
 
-  // Update the chatbox with the retrieved messages
   chatbox.innerHTML = ""; // Clear existing messages
 
   let i = 0;
@@ -26,6 +38,7 @@ function processMessages(responseText) {
     //Creation of Elements
     let MessageListElement = document.createElement("li");
     let MessageElement = document.createElement("p");
+    let InfoDiv = document.createElement("div");
     let DateElement = document.createElement("span");
     let TimeElement = document.createElement("span");
     let UsernameElement = document.createElement("span");
@@ -38,20 +51,28 @@ function processMessages(responseText) {
 
     //Styling of Elements
     MessageListElement.classList.add("container");
-    if (i % 2 == 1) {
+    if (i % 2 === 1) {
       MessageListElement.classList.add("darker");
     }
     i++;
 
+    InfoDiv.classList.add("message-information");
+    MessageElement.classList.add("message");
+    UsernameElement.classList.add("username");
+    TimeElement.classList.add("msg-time");
+    DateElement.classList.add("msg-date");
+
     //Element placement
+    InfoDiv.appendChild(UsernameElement);
+    InfoDiv.appendChild(TimeElement);
+    InfoDiv.appendChild(DateElement);
     MessageListElement.appendChild(MessageElement);
-    MessageListElement.appendChild(DateElement);
-    MessageListElement.appendChild(TimeElement);
-    MessageListElement.appendChild(UsernameElement);
+    MessageListElement.appendChild(InfoDiv);
     chatbox.appendChild(MessageListElement);
   }
 }
 
+// FETCH CHAT MESSAGES
 function fetchChatMessages() {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "htbin/chatget.py", true);
@@ -77,6 +98,63 @@ function fetchChatMessages() {
   xhr.send();
 }
 
-// Call the function to load messages on page load
-document.addEventListener("DOMContentLoaded", fetchChatMessages);
+// Helper function to send POST requests
+function sendPostRequest(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(data).toString(),
+  });
+}
+
+// SEND USER MESSAGE
+function sendUserMessage(event) {
+  event.preventDefault(); // Prevent page reload
+  const messageInput = document.getElementById("msg");
+  const message = messageInput.value.trim();
+
+  // Reset error message
+  messageErrorPElement.innerHTML = "";
+
+  if (!message) {
+    messageErrorPElement.innerHTML = "Message cannot be empty!";
+    return;
+  }
+
+  const data = { msg: message }; // Data to send
+
+  sendPostRequest("/htbin/chatsend.py", data)
+    .then((response) => {
+      if (!response.ok) {
+        // Handle HTTP-level errors
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json(); // Parse JSON if response is valid
+    })
+    .then((responseData) => {
+      console.log("Server response:", responseData);
+
+      if (responseData.num === 0) {
+        messageInput.value = ""; // Clear input field
+        fetchChatMessages(); // Refresh messages
+      } else if (responseData.num === 1) {
+        console.error("The message field is not provided");
+        messageErrorPElement.innerHTML =
+          "Server-Side problem: The message field is not provided.";
+      } else if (responseData.num === -1) {
+        console.error("Username is not provided");
+        messageErrorPElement.innerHTML =
+          "Server-Side problem: Username is not provided.";
+      }
+    })
+    .catch((error) => {
+      console.error("Error sending message:", error);
+      messageErrorPElement.innerHTML =
+        "An unexpected error occurred while sending the message.";
+    });
+}
+
+// INITIALIZE
+//document.addEventListener("DOMContentLoaded", fetchChatMessages);
 //setInterval(fetchChatMessages, 5000); // Fetch messages every 5 seconds
+form.addEventListener("submit", sendUserMessage);

@@ -43,6 +43,15 @@ form button {
   margin: 1rem auto;
 }
 
+
+.errorMessage{
+  text-align: center;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3125rem;
+}
+
+
 @media (max-width: 48.5rem) {
   /*768px*/
   #chat-box {

@@ -69,10 +69,6 @@ button:hover {
 
 @media (max-width: 48.5rem) {
   /*768px*/
-
-  #registration-form {
-    width: 27.5rem;
-  }
 }
 
 @media (max-width: 30rem) {

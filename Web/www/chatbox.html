@@ -97,7 +97,7 @@
     </aside>
     <main>
       <div id="chat-box">
-        <h1>Chat</h1>
+        <h1>Forum</h1>
         <section>
           <!--READ MESSAGES-->
           <ul id="read-messages">
@@ -124,7 +124,7 @@
         </section>
         <section>
           <!--SEND MESSAGE-->
-          <form action="/htbin/chatsend.py" method="POST">
+          <form action="/htbin/chatsend.py" method="POST" novalidate>
             <div>
               <label for="msg">Your Message :</label>
               <textarea name="msg" id="msg" rows="5" required></textarea>
