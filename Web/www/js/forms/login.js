@@ -13,63 +13,56 @@ console.dir(messageArea);
 function sendLoginRequest(event) {
   event.preventDefault(); // Prevent sending the form
 
-  // fetch Form data
-  let formData = new FormData(form); // creates an object, optionally fill from
-  console.log("Form data collected:", [...formData.entries()]);  
+  // Manually create URL-encoded form data
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("userpwd").value;
 
-  // add one more field
-  formData.append("erkin", "123");
+  // Manually construct the form data string
+  let formData = `username=${encodeURIComponent(
+    username
+  )}&userpwd=${encodeURIComponent(password)}`;
 
   // 1. Create a new XMLHttpRequest object
   let xhr = new XMLHttpRequest();
+
   // 2. Configure it
   xhr.open("POST", "htbin/login.py", true);
-  xhr.responseType = "text";
 
-  // 3. Send the request over the network
+  // IMPORTANT: Set the correct content type for form submission
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // 3. Send the request
   xhr.send(formData);
 
-  // 4. This will be called after the response is received
+  // 4. Handle the response
   xhr.onload = function () {
-    console.log("Response received, status:", xhr.status);
-
     if (xhr.status === 200) {
-      // Get the answer from the server
-      let response = xhr.response;
-      console.log("Server response:", response);
+      let response = xhr.responseText;
+      let messageArea = document.getElementById("message-area");
 
-      // Show the login response message
       messageArea.innerHTML = "* " + response;
-
-      // Login response choices (Logged/not-logged)
       messageArea.classList.add("login-result-message");
 
       if (response.startsWith("Bonjour")) {
         messageArea.classList.add("login-success");
         messageArea.classList.remove("login-failed");
-
         console.log("Login successful!");
       } else {
         messageArea.classList.add("login-failed");
         messageArea.classList.remove("login-success");
-
         console.log("Login failed!");
       }
     } else {
-      messageArea.textContent = `Error: ${xhr.status} - ${xhr.statusText}`;
-      messageArea.classList.add("login-result-message", "login-failed");
-      messageArea.classList.remove("login-success");
-
       console.error("Server error:", xhr.status, xhr.statusText);
     }
   };
 
-  // catch the errors
+  // Catch network errors
   xhr.onerror = function () {
     console.error("Network error occurred");
+    let messageArea = document.getElementById("message-area");
     messageArea.textContent = "Network error. Please try again later.";
     messageArea.classList.add("login-result-message", "login-failed");
-    messageArea.classList.remove("login-success");
   };
 }
 
