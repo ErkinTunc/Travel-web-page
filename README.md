@@ -19,7 +19,7 @@
 ## 🌐 Live Demo
 
 You can view the live demo of the website here:  
-[Travel-Web-Page on Netlify](https://travel-goals-page.netlify.app)
+[Travel-Web-Page on Netlify](https://travel-goals-page.netlify.app) (without server-side)
 
 ---
 
