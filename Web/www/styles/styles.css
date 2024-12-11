@@ -101,6 +101,10 @@ body {
   color: rgb(0, 160, 117);
 }
 
+.destination a{
+  text-decoration: none;
+}
+
 /*----------Media-Queries------------*/
 
 @media (max-width: 48.5rem) {
