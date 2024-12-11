@@ -1,10 +1,29 @@
+:root {
+  --drab-dark-brown: #4b441cff;
+  --eerie-black: #1f2014ff;
+  --drab-dark-brown-2: #312a1aff;
+  --eerie-black-2: #282417ff;
+  --timberwolf: #e1dcdbff;
+  --drab-dark-brown-3: #503f21ff;
+  --beaver: #978367ff;
+  --lion: #b59574ff;
+  --coyote: #876f59ff;
+  --khaki: #c6ac89ff;
+
+  --page-logo-color: rgb(54, 150, 161);
+}
+
 body {
   background: linear-gradient(180deg, rgb(55, 83, 86), rgb(140, 174, 178));
   color: rgb(255, 255, 255);
 }
 
-#page-logo a{
-  color: rgb(167, 232, 239);
+#page-logo a {
+  color: var(--page-logo-color);
+}
+
+header a {
+  color: var(--page-logo-color);
 }
 
 #hero {
@@ -13,7 +32,7 @@ body {
 
 /*-------------------INTRODUCTION---------------------*/
 #city-introduction {
-  background: linear-gradient(180deg, rgb(50, 51, 51), rgb(88, 113, 116));
+  background: linear-gradient(180deg, var(--beaver), rgb(88, 113, 116));
 
   padding: 4rem;
 }

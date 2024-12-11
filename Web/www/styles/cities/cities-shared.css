@@ -67,6 +67,16 @@ p {
   font-size: 1.5rem;
 }
 
+/*---------------------CONTENT------------------------*/
+li p a {
+  text-decoration: none;
+  color: rgb(91, 3, 91);
+}
+
+li p a:hover {
+  text-decoration: underline;
+}
+
 /*-------------------The Fullscreen Image Modal--------------------*/
 
 /* The Modal (background) */
