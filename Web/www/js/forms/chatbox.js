@@ -28,9 +28,8 @@ function handleStateChange(xhr) {
 }
 
 // PROCESS AND DISPLAY MESSAGES
-function processMessages(responseText) {
-  const messages = JSON.parse(responseText);
-
+function processMessages(messages) {
+  // messages should be parsed before
   chatbox.innerHTML = ""; // Clear existing messages
 
   let i = 0;
@@ -77,21 +76,31 @@ function fetchChatMessages() {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "htbin/chatget.py", true);
 
-  // Assign the state change handler
   xhr.onreadystatechange = function () {
     handleStateChange(xhr); // Pass the XMLHttpRequest object
-    let messages;
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      try {
-        // Call the separate function to handle the response
-        messages = JSON.parse(xhr.responseText);
-        processMessages(messages);
-      } catch (error) {
-        console.error("JSON Parsing Error: ", error);
-        console.error("Raw Response: ", xhr.responseText); // Log raw response for debugging
+
+    if (xhr.readyState === 4) {
+      console.log("Response status:", xhr.status);
+      console.log("Response text:", xhr.responseText);
+
+      if (xhr.status === 200) {
+        try {
+          const responseText = xhr.responseText.trim();
+          if (!responseText) {
+            console.error("Empty response received");
+            return;
+          }
+
+          // Call the separate function to handle the response
+          const messages = JSON.parse(xhr.responseText);
+          processMessages(messages);
+        } catch (error) {
+          console.error("JSON Parsing Error: ", error);
+          console.error("Raw Response: ", xhr.responseText); // Log raw response for debugging
+        }
+      } else {
+        console.error("Request failed. Status:", xhr.status);
       }
-    } else {
-      console.error("Empty or malformed response received.");
     }
   };
 
@@ -155,6 +164,6 @@ function sendUserMessage(event) {
 }
 
 // INITIALIZE
-//document.addEventListener("DOMContentLoaded", fetchChatMessages);
+document.addEventListener("DOMContentLoaded", fetchChatMessages);
 //setInterval(fetchChatMessages, 5000); // Fetch messages every 5 seconds
-form.addEventListener("submit", sendUserMessage);
+//form.addEventListener("submit", sendUserMessage);
