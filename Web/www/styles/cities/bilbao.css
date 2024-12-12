@@ -1,14 +1,14 @@
 :root {
-  --drab-dark-brown: #4b441cff;
-  --eerie-black: #1f2014ff;
-  --drab-dark-brown-2: #312a1aff;
-  --eerie-black-2: #282417ff;
+  --bistre: #403022ff;
+  --eerie-black: #21221aff;
+  --drab-dark-brown: #312a1aff;
+  --bistre-2: #271b12ff;
   --timberwolf: #e1dcdbff;
-  --drab-dark-brown-3: #503f21ff;
+  --dark-moss-green: #605c22ff;
   --beaver: #978367ff;
   --lion: #b59574ff;
-  --coyote: #876f59ff;
-  --khaki: #c6ac89ff;
+  --dim-gray: #797466ff;
+  --khaki: #c4ab9aff;
 
   --page-logo-color: rgb(54, 150, 161);
 }
