@@ -26,6 +26,10 @@ header a {
   color: var(--page-logo-color);
 }
 
+.menu-btn span{
+  background-color: var(--page-logo-color);
+}
+
 #hero {
   background-image: url("/img/places/bilbao/bilbao-city-view-architecture.jpg");
 }
