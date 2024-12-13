@@ -16,17 +16,6 @@ messageErrorPElement.classList.add("errorMessage");
 
 //FUNCTIONS
 
-// HANDLE SERVER RESPONSE
-function handleStateChange(xhr) {
-  if (xhr.readyState === 4) {
-    if (xhr.status === 200) {
-      console.log("Server Response:", xhr.responseText); // Log the raw response
-    } else {
-      console.error("Request failed. Status:", xhr.status);
-    }
-  }
-}
-
 // PROCESS AND DISPLAY MESSAGES
 function processMessages(messages) {
   // messages should be parsed before
@@ -77,8 +66,6 @@ function fetchChatMessages() {
   xhr.open("GET", "htbin/chatget.py", true);
 
   xhr.onreadystatechange = function () {
-    handleStateChange(xhr); // Pass the XMLHttpRequest object
-
     if (xhr.readyState === 4) {
       console.log("Response status:", xhr.status);
       console.log("Response text:", xhr.responseText);
