@@ -6,7 +6,7 @@ const msgInputElement = document.getElementById("msg");
 console.dir(chatbox);
 console.dir(form);
 console.dir(msgInputElement);
-console.log("hello world");
+console.log("=== Hello World ===");
 
 // Error message Element
 let messageErrorPElement = document.createElement("p");
