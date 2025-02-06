@@ -1,53 +1,61 @@
-body {
-  background: linear-gradient(180deg, rgb(55, 83, 86), rgb(140, 174, 178));
-  color: rgb(255, 255, 255);
+/* ========= CSS VARIABLES ========= */
+:root {
+  --primary-dark: rgb(55, 83, 86);
+  --primary-light: rgb(140, 174, 178);
+  --secondary-dark: rgb(50, 51, 51);
+  --secondary-light: rgb(88, 113, 116);
+  --text-color: rgb(255, 255, 255);
+  --highlight-color: rgb(42, 7, 146);
 }
 
+/* ========= GLOBAL STYLES ========= */
+body {
+  background: linear-gradient(
+    180deg,
+    var(--primary-dark),
+    var(--primary-light)
+  );
+  color: var(--text-color);
+}
+
+/* ========= HERO SECTION ========= */
 #hero {
   background-image: url("/img/places/izmir/izmir-saat-kulesi3.jpg");
 }
 
-/*-------------------INTRODUCTION---------------------*/
+/* ========= CITY INTRODUCTION ========= */
 #city-introduction {
-  background: linear-gradient(180deg, rgb(50, 51, 51), rgb(88, 113, 116));
-
+  background: linear-gradient(
+    180deg,
+    var(--secondary-dark),
+    var(--secondary-light)
+  );
   padding: 4rem;
 }
 
 #introduction-content {
   margin: 0 auto;
-  width: 80%; /* Set a width */
+  width: 80%;
 }
 
-/*---------------------CONTENT------------------------*/
-
-.fullscreen-img {
-  color: rgb(42, 7, 146);
-  font-weight: bold;
-}
-
-.fullscreen-img:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
+/* ========= CITY CONTENT ========= */
 #cities-beauties {
   margin: 0 auto;
-  width: 80%; /* Set a width */
+  width: 80%;
 }
 
 #cities-beauties ul li {
   margin: 0 auto;
 }
 
+/* Image Content Styles */
 .image-item-content {
   display: flex;
   flex-direction: row;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0;
 }
 
 .reverse {
-  /*image-item-content reverse*/
   flex-direction: row-reverse;
 }
 
@@ -59,7 +67,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0;
 }
 
 #row-images img {
@@ -70,10 +78,27 @@ body {
   margin: 1.5rem 2rem;
 }
 
-/*----------Media-Queries------------*/
+/* Fullscreen Image Styles */
+.fullscreen-img {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+.fullscreen-img:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ========= MEDIA QUERIES ========= */
+@media (max-width: 68.75rem) {
+  #cities-beauties {
+    width: 90%;
+  }
+}
 
 @media (max-width: 64rem) {
-  /*1024px*/
+  /* 1024px */
+  /* Hero Content */
   #hero-content {
     width: 80%;
   }
@@ -86,11 +111,7 @@ body {
     font-size: 1.25rem;
   }
 
-  .item-content {
-    margin: 1.5rem 1.5rem;
-  }
-
-  /*----MAIN CONTENT-----*/
+  /* Main Content */
   h2 {
     font-size: 2rem;
   }
@@ -100,6 +121,11 @@ body {
     text-align: justify;
   }
 
+  .item-content {
+    margin: 1.5rem;
+  }
+
+  /* Images */
   main li img {
     width: 14.5rem;
     height: 24rem;
@@ -108,14 +134,15 @@ body {
   .horizontal-images {
     width: 15.5rem;
   }
+
   .styled-table {
     width: 95%;
   }
 }
 
 @media (max-width: 48.5rem) {
-  /*768px*/
-
+  /* 768px */
+  /* Hero Content */
   #hero-content {
     width: 90%;
   }
@@ -132,17 +159,20 @@ body {
     font-size: 1rem;
   }
 
-  .destination {
-    margin: 0 0.4rem;
-  }
-  /*----MAIN CONTENT-----*/
+  /* Main Content */
   #city-introduction {
     padding: 0.2rem 0.1rem;
   }
+
   p {
     font-size: 1rem;
   }
 
+  .destination {
+    margin: 0 0.4rem;
+  }
+
+  /* Images */
   main li img {
     width: 10.5rem;
     height: 20rem;
@@ -150,7 +180,8 @@ body {
 }
 
 @media (max-width: 30rem) {
-  /*480px*/
+  /* 480px */
+  /* Layout */
   .image-item-content {
     flex-direction: column;
     align-items: center;
@@ -158,16 +189,17 @@ body {
   }
 
   .item-content {
-    margin: 0rem 1rem;
+    margin: 0 1rem;
   }
 
+  /* Images */
   main li img {
     width: 14.5rem;
     height: 24rem;
   }
 
   #row-images {
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
     justify-content: center;
   }
 
@@ -177,9 +209,8 @@ body {
     margin: 0.2rem;
   }
 
+  /* Table */
   .styled-table {
     min-width: 18rem;
   }
 }
-
-

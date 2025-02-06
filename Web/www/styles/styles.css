@@ -107,6 +107,13 @@ body {
 
 /*----------Media-Queries------------*/
 
+@media (max-width: 60rem) {
+  #hero-content {
+    width: 96%;
+  }
+}
+
+
 @media (max-width: 48.5rem) {
   /*768px*/
 

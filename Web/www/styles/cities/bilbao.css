@@ -26,7 +26,7 @@ header a {
   color: var(--page-logo-color);
 }
 
-.menu-btn span{
+.menu-btn span {
   background-color: var(--page-logo-color);
 }
 
@@ -101,6 +101,11 @@ header a {
 
 @media (max-width: 64rem) {
   /*1024px*/
+
+  #cities-beauties {
+    width: 90%;
+  }
+
   #hero-content {
     width: 80%;
   }
