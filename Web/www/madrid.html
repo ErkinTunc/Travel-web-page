@@ -34,11 +34,14 @@
     />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
     <!--My styles-->
-    <link rel="stylesheet" href="/styles/shared-normalize.css" />
-    <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="styles/shared-normalize.css" />
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/cities/big-cities-shared.css" />
+    <link rel="stylesheet" href="styles/cities/madrid.css" />
     <!-- JavaScript -->
-    <script src="js/index.js" defer></script>
+    <script src="/js/shared.js" defer></script>
+    <script src="/js/cities-shared.js" defer></script>
+
     <title>Travel Page</title>
   </head>
   <body>
@@ -59,6 +62,7 @@
         <span></span>
       </a>
     </header>
+    <!--Side Drawer -->
     <aside id="side-drawer">
       <header>
         <a href="#" class="menu-btn">
@@ -81,6 +85,13 @@
         </ul>
       </nav>
     </aside>
+    <!-- The Fullscreen Image Modal -->
+    <aside id="myModal" class="modal">
+      <!--JavaScript-->
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </aside>
     <!-- NoScript -->
     <aside>
       <noscript>
@@ -95,44 +106,34 @@
     <main>
       <section id="hero">
         <!-- Hero-Image : is an image which captures all the attention -->
+        <video autoplay muted loop playsinline>
+          <source src="video/Buen-Retiro-Park-Madrid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div id="hero-content">
-          <h1>Travel Page</h1>
-          <p>Life is an experience | Why not enriching it</p>
-          <a href="/places.html">Discover places</a>
+          <h1>Madrid</h1>
         </div>
       </section>
-      <section id="highlights">
-        <h2>Highlights</h2>
-        <ul id="destinations">
-          <li class="destination">
-            <img src="/img/places/madrid.webp" alt="Madrid views" />
-            <a href="/madrid.html">
-              <p>Madrid <strong>Spain</strong></p>
-            </a>
-          </li>
-          <li class="destination">
-            <img src="/img/places/izmir.jpeg" alt="Izmir Clock Tower " />
-            <a href="/izmir.html">
-              <p>Izmir <strong>Turkey</strong></p>
-            </a>
-          </li>
-          <li class="destination">
-            <img src="/img/places/tokyo.jpg" alt="City views of Japan" />
-            <p>Tokyo <strong>Japan</strong></p>
-          </li>
-        </ul>
+      <section id="city-introduction">
+        <div id="introduction-content">
+          <h2>Welcome to Madrid</h2>
+        </div>
       </section>
+      <section id="cities-beauties"></section>
+
+      <section id="city-video"></section>
+      <section class="city-cheat-card"></section>
     </main>
     <footer>
       <ul>
         <li>
           <a href="https://www.instagram.com/">
-            <img src="/img/icons/insta.png" alt="instagram-logo"
+            <img src="img/icons/insta.png" alt="instagram-logo"
           /></a>
         </li>
         <li>
           <a href="https://www.facebook.com/">
-            <img src="/img/icons/facebook.png" alt="facebook-logo" />
+            <img src="img/icons/facebook.png" alt="facebook-logo" />
           </a>
         </li>
       </ul>
