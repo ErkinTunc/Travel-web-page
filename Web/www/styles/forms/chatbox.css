@@ -28,6 +28,12 @@ p {
   background-color: #ddd;
 }
 
+.message-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 form {
   width: 98%;
   margin: auto 1%;
@@ -43,14 +49,12 @@ form button {
   margin: 1rem auto;
 }
 
-
-.errorMessage{
+.errorMessage {
   text-align: center;
   color: red;
   font-size: 0.9rem;
   margin-top: 0.3125rem;
 }
-
 
 @media (max-width: 48.5rem) {
   /*768px*/
