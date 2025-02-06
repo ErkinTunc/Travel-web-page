@@ -39,9 +39,8 @@ function sendLoginRequest(event) {
     if (xhr.status === 200) {
       let response = xhr.responseText;
       let messageArea = document.getElementById("message-area");
-      console.log("DONE", xhr.readyState)
 
-      messageArea.innerHTML = "* " + response;
+      messageArea.innerHTML = response;
       messageArea.classList.add("login-result-message");
 
       if (response.startsWith("Bonjour")) {
