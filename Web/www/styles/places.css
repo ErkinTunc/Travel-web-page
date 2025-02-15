@@ -7,6 +7,15 @@ body {
   color: rgb(183, 230, 235);
 }
 
+#page-logo a:hover,
+#page-logo a:focus {
+  color: rgb(111, 218, 230);
+}
+
+header a {
+  color: rgb(183, 230, 235);
+}
+
 header {
   position: static;
 }
@@ -15,7 +24,8 @@ header a {
   color: rgb(183, 230, 235);
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   background-color: rgb(183, 230, 235);
   color: rgb(59, 59, 59);
 }
@@ -82,7 +92,7 @@ main li img {
   padding: 0.375rem;
 }
 
-.actions a:hover {
+.actions a:hover,.actions a:focus {
   background-color: rgb(235, 253, 255);
   border-radius: 5px;
 }
