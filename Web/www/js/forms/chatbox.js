@@ -16,6 +16,12 @@ messageErrorPElement.classList.add("errorMessage");
 
 //FUNCTIONS
 
+function addLinesToMessages(message) {
+  // New line in paragraph when Enter is pressed in textarea // it is an string:message
+  if (!message) return "Message non spécifié"; // handle empty or undefined messages
+  return `<pre style="font-family: inherit; margin: 0;">${message}</pre>`;
+}
+
 // PROCESS AND DISPLAY MESSAGES
 function processMessages(messages) {
   // messages should be parsed before
@@ -32,7 +38,7 @@ function processMessages(messages) {
     let UsernameElement = document.createElement("span");
 
     //Adding information to Elements
-    MessageElement.textContent = msgObj.msg || "Message non spécifié";
+    MessageElement.innerHTML = addLinesToMessages(msgObj.msg) || "Message non spécifié";
     DateElement.textContent = msgObj.date || "Date non spécifié";
     TimeElement.textContent = msgObj.time || "Time non spécifié";
     UsernameElement.textContent = msgObj.user || "Username non spécifié";
@@ -152,5 +158,5 @@ function sendUserMessage(event) {
 
 // INITIALIZE
 document.addEventListener("DOMContentLoaded", fetchChatMessages);
-//setInterval(fetchChatMessages, 5000); // Fetch messages every 5 seconds
-//form.addEventListener("submit", sendUserMessage);
+setInterval(fetchChatMessages, 1000); // Fetch messages every 5 seconds
+form.addEventListener("submit", sendUserMessage);
