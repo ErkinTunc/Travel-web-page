@@ -6,11 +6,17 @@ body {
   color: rgb(183, 230, 235);
 }
 
+#page-logo a:hover,
+#page-logo a:focus {
+  color: rgb(183, 230, 235);
+}
+
 header a {
   color: rgb(183, 230, 235);
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   background-color: rgb(183, 230, 235);
   color: rgb(59, 59, 59);
 }

@@ -10,7 +10,7 @@
   --dim-gray: #797466ff;
   --khaki: #c4ab9aff;
 
-  --page-logo-color: rgb(54, 150, 161);
+  --page-logo-color: rgb(255, 251, 0);
 }
 
 body {
@@ -164,6 +164,10 @@ header a {
     font-size: 1rem;
   }
 
+  .image-item-content {
+    align-items: center;
+  }
+
   .destination {
     margin: 0 0.4rem;
   }
@@ -181,7 +185,7 @@ header a {
   }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 45rem) {
   /*480px*/
   .image-item-content {
     flex-direction: column;
@@ -193,8 +197,12 @@ header a {
     margin: 0rem 1rem;
   }
 
+  .image{
+    margin-left: 10%;
+  }
+
   main li img {
-    width: 14.5rem;
+    width: 90%;
     height: 24rem;
   }
 
@@ -213,3 +221,10 @@ header a {
     min-width: 18rem;
   }
 }
+
+/* @media (max-width: 30rem){
+  main li img {
+    width: 14.5rem;
+    height: 24rem;
+  }
+} */
