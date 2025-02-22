@@ -38,7 +38,8 @@ function processMessages(messages) {
     let UsernameElement = document.createElement("span");
 
     //Adding information to Elements
-    MessageElement.innerHTML = addLinesToMessages(msgObj.msg) || "Message non spécifié";
+    MessageElement.innerHTML =
+      addLinesToMessages(msgObj.msg) || "Message non spécifié";
     DateElement.textContent = msgObj.date || "Date non spécifié";
     TimeElement.textContent = msgObj.time || "Time non spécifié";
     UsernameElement.textContent = msgObj.user || "Username non spécifié";
@@ -131,7 +132,14 @@ function sendUserMessage(event) {
         // Handle HTTP-level errors
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return response.json(); // Parse JSON if response is valid
+      return response.text(); // Read response as text first
+    })
+    .then((text) => {
+      console.log("Raw response from server:", text);
+      if (!text.trim()) {
+        throw new Error("Empty response from server");
+      }
+      return JSON.parse(text); // Now parse as JSON
     })
     .then((responseData) => {
       console.log("Server response:", responseData);
@@ -158,5 +166,5 @@ function sendUserMessage(event) {
 
 // INITIALIZE
 document.addEventListener("DOMContentLoaded", fetchChatMessages);
-setInterval(fetchChatMessages, 1000); // Fetch messages every 5 seconds
+//setInterval(fetchChatMessages, 1000); // Fetch messages every 5 seconds
 form.addEventListener("submit", sendUserMessage);
