@@ -20,10 +20,12 @@ body {
 
 #page-logo a {
   color: var(--page-logo-color);
+  background-color: transparent;
 }
 
 header a {
   color: var(--page-logo-color);
+  background-color: darkslategray;
 }
 
 .menu-btn span {
@@ -222,9 +224,4 @@ header a {
   }
 }
 
-/* @media (max-width: 30rem){
-  main li img {
-    width: 14.5rem;
-    height: 24rem;
-  }
-} */
+

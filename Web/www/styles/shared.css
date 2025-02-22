@@ -28,10 +28,11 @@ header {
   text-decoration: none;
   text-transform: uppercase; /*Made the writing all uppercase*/
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  background-color: transparent;
 }
 
 #page-logo a:hover,
-#page-logo a:focus{
+#page-logo a:focus {
   color: rgb(245, 241, 33);
 }
 
@@ -52,6 +53,7 @@ header a {
   border-radius: 6px;
   transition: all 0.3s ease;
   font-weight: bolder;
+  background-color: gray;
 }
 
 header nav a:hover,

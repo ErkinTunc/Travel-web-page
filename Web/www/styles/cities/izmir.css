@@ -79,7 +79,7 @@ body {
   margin: 1.5rem 2rem;
 }
 
-/* Fullscreen Image Styles */
+/* === Fullscreen Image Styles === */
 .fullscreen-img {
   color: var(--highlight-color);
   font-weight: bold;
