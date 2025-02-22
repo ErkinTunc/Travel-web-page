@@ -1,3 +1,8 @@
+/* ==== CSS Variables ====*/
+:root {
+  --page-logo-color: rgb(54, 150, 161);
+}
+
 /* ========= GLOBAL STYLES ========= */
 body {
   background: linear-gradient(180deg, rgb(55, 83, 86), rgb(140, 174, 178));
@@ -15,16 +20,20 @@ header {
 }
 
 #page-logo a {
-  color: rgb(54, 150, 161);
+  color: var(--page-logo-color);
+  background-color: transparent;
+}
+
+header a {
+  color: var(--page-logo-color);
+  background-color: darkslategray;
+}
+
+.menu-btn span {
+  background-color: var(--page-logo-color);
 }
 
 /* ========= HERO SECTION ========= */
-#hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
 
 #hero video {
   position: absolute;
@@ -56,11 +65,33 @@ header {
 }
 
 #introduction-content {
-  margin: 0 auto;
-  width: 80%;
+  margin: 0 11%;
+  text-align: justify;
+}
+
+/* ========== CITIES BEAUTIES ===========*/
+.cities-beauties p {
+  text-align: justify;
+  margin: 2rem 14%;
+}
+
+.cities-beauties li {
+  margin-bottom: 5rem;
 }
 
 /* ========= IMG MODAL STYLES | ASIDE  ========= */
+
+/* === Fullscreen Image Styles === */
+.fullscreen-img {
+  color: blue;
+  font-weight: bold;
+}
+
+.fullscreen-img:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -88,6 +119,58 @@ header {
 .modal.show .close {
   /*Use JS to add the class*/
   display: block;
+}
+
+/* ======= Parallax Effect =======*/
+
+.parallax {
+  /* The image used */
+  background-image: url("/img/places/madrid/royal-palace-of-madrid.jpg");
+
+  /* Full height */
+  height: 32rem;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#idRoyalPalace {
+  background-image: url("/img/places/madrid/royal-palace-of-madrid.jpg");
+}
+
+#plazaMayor {
+  background-image: url("/img/places/madrid/plaza-mayor2.jpeg");
+}
+
+#retiroParc {
+  background-image: url("/img/places/madrid/retiro-park2.jpeg");
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 85.375rem) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.caption {
+  position: sticky;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 1.125rem;
+  font-size: 1.5625rem;
+  letter-spacing: 0.625rem;
 }
 
 /* ========= MEDIA QUERIES ========= */
@@ -150,53 +233,40 @@ header {
     font-size: 1rem;
   }
 
-  .destination {
-    margin: 0 0.4rem;
+  #city-introduction {
+    padding: 1.2rem 0.1rem;
   }
 
-  #city-introduction {
-    padding: 0.2rem 0.1rem;
+  #city-introduction h2 {
+    font-size: 1.5rem;
   }
 
   p {
     font-size: 1rem;
   }
+}
 
-  main li img {
-    width: 10.5rem;
-    height: 20rem;
+@media (max-width: 38rem) {
+  /* 630px */
+  .caption span.border {
+    font-size: 1rem;
+  }
+
+  #introduction-content,
+  .cities-beauties p {
+    margin: 2rem 10%;
   }
 }
 
 @media (max-width: 30rem) {
-  /* 480px */
-  .image-item-content {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+  /* 630px */
+  .caption span.border {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
   }
 
-  .item-content {
-    margin: 0 1rem;
-  }
-
-  main li img {
-    width: 14.5rem;
-    height: 24rem;
-  }
-
-  #row-images {
-    margin: 2rem 0;
-    justify-content: center;
-  }
-
-  #row-images img {
-    width: 6rem;
-    height: 18rem;
-    margin: 0.2rem;
-  }
-
-  .styled-table {
-    min-width: 18rem;
+  #introduction-content,
+  .cities-beauties p {
+    margin: 2rem 5%;
   }
 }
