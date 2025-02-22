@@ -2,7 +2,7 @@
 
 ## 🌍 Overview
 
-**Travel-Web-Page** is a website dedicated to showcasing touristic sites. Designed with a focus on user interactivity and responsive design, it serves as a learning project to develop and refine front-end web development skills.
+**Travel-Web-Page** is a website dedicated to showcasing touristic sites. Designed with a focus on user interactivity and responsive design, it serves as a learning project to develop and refine front-end web development skills. To maintain a pure learning experience, no frameworks are used.
 
 ---
 
