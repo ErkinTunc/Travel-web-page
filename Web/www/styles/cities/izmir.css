@@ -6,6 +6,7 @@
   --secondary-light: rgb(88, 113, 116);
   --text-color: rgb(255, 255, 255);
   --highlight-color: rgb(42, 7, 146);
+  --highlight-color-introduction: rgb(114 191 233);
 }
 
 /* ========= GLOBAL STYLES ========= */
@@ -82,6 +83,11 @@ body {
 /* === Fullscreen Image Styles === */
 .fullscreen-img {
   color: var(--highlight-color);
+  font-weight: bold;
+}
+
+#introduction-content .fullscreen-img {
+  color: var(--highlight-color-introduction);
   font-weight: bold;
 }
 
@@ -231,5 +237,5 @@ body {
 
   .image {
     margin-left: 0;
-}
+  }
 }

@@ -2,6 +2,12 @@
   justify-content: center;
 }
 
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .login-result-message {
   width: 30rem;
   margin: 2rem auto;

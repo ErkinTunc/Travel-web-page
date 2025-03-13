@@ -169,7 +169,7 @@ li p a:hover {
 /*----------IMG-&-FIGURE-----------*/
 .image {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 1.875;
   transition: all 0.8s;
 }
 
@@ -188,10 +188,10 @@ li p a:hover {
 
 figure {
   font-family: "Ubuntu";
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #282828;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 main li img {

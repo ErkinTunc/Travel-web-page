@@ -19,7 +19,6 @@ header nav a:hover {
 
 /* ====== Hero Section ======== */
 #hero {
-  
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -27,7 +26,7 @@ header nav a:hover {
   align-items: center;
 }
 
-.position-relative{
+.position-relative {
   position: relative;
 }
 
@@ -80,11 +79,16 @@ li p a {
   color: rgb(91, 3, 91);
 }
 
-.display-none{
+.internal-link {
+  text-decoration: none;
+  color: rgb(91, 3, 91);
+}
+
+.display-none {
   display: none;
   position: unset;
 }
 
-.position-static{
+.position-static {
   position: static;
 }
