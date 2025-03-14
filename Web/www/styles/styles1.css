@@ -1,0 +1,151 @@
+body {
+  background: linear-gradient(0deg, rgb(202, 243, 240), rgb(66 94 193));
+}
+
+#hero {
+  height: 50rem;
+  background-image: url("/img/hero-images/women-on-the-middle-of-the-beach.jpg");
+  background-position: center;
+  background-size: cover; /*img will cover the entire element*/
+}
+
+#hero-content {
+  width: 56.25rem;
+  background-color: rgba(51, 47, 47, 0.8);
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  border-radius: 8px;
+  text-align: center;
+  padding: 3.125rem 0;
+  margin: 0 auto;
+  position: relative;
+  top: 12.5rem;
+}
+
+.hero-content-display-none {
+  /*JAVASCRIPT is used*/
+  display: none;
+}
+
+#hero-content h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  font-family: "Raleway", sans-serif;
+}
+
+#hero-content p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+#hero-content a {
+  text-decoration: none;
+  background-color: rgb(255, 251, 0);
+  padding: 0.75rem 1.5rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700; /*bold*/
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+}
+
+#hero-content a:hover,
+#hero-content a:focus {
+  background-color: rgb(255, 238, 0);
+}
+
+#highlights {
+  padding: 1.5rem;
+  background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240));
+}
+
+#highlights h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: rgb(59, 65, 64);
+  margin: 1.5rem 0;
+}
+
+#destinations {
+  display: flex;
+  width: 90%;
+  margin: auto; /*with the auto value to center the container here.*/
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.destination {
+  margin: 0 1.25rem;
+  text-transform: uppercase;
+}
+
+.destination a:hover,
+.destination a:focus {
+  font-size: xx-large;
+  transform: scale(1.1); /* Slightly scale up the link */
+  transition: all 0.3s ease; /* Smooth transition for the effect */
+}
+
+.destination p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(124, 123, 123);
+  margin: 1.25rem 0;
+}
+
+.destination img {
+  height: 12.5rem;
+  width: 100%;
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.destination strong {
+  color: rgb(0, 160, 117);
+}
+
+.destination a {
+  text-decoration: none;
+}
+
+/*----------Media-Queries------------*/
+
+@media (max-width: 60rem) {
+  #hero-content {
+    width: 96%;
+  }
+}
+
+@media (max-width: 48.5rem) {
+  /*768px*/
+
+  #hero-content {
+    width: 90%;
+  }
+
+  #hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero-content p {
+    font-size: 1.25rem;
+  }
+
+  #hero-content a {
+    font-size: 1rem;
+  }
+
+  .destination {
+    margin: 0 0.4rem;
+  }
+}
+
+/*------- Styles for the noscript warning------- */
+.noscript-warning {
+  margin: 5rem auto 0rem auto;
+}

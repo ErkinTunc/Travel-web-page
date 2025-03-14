@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <!--My styles-->
+    <link rel="stylesheet" href="/styles/shared-normalize.css" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/cities/cities-shared.css" />
+    <link rel="stylesheet" href="/styles/cities/bilbao.css" />
+    <!-- JavaScript -->
+    <script src="/js/small-cities-shared.js" defer></script>
+
+    <title>Travel Page</title>
+  </head>
+  <body>
+    <header>
+      <div id="page-logo">
+        <a href="/index.html">Travel Goals</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/places.html">Destinations</a></li>
+          <li><a href="/login.html">Login</a></li>
+          <li><a href="/chatbox.html">Forum</a></li>
+        </ul>
+      </nav>
+      <a href="#side-drawer" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </header>
+    <!--Side Drawer -->
+    <aside id="side-drawer">
+      <header>
+        <a href="#" class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/places.html">Destinations</a>
+          </li>
+          <li>
+            <a href="/login.html">Login</a>
+          </li>
+          <li>
+            <a href="/chatbox.html">Forum</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- The Fullscreen Image Modal -->
+    <aside id="myModal" class="modal">
+      <!--JavaScript-->
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </aside>
+    <!-- NoScript -->
+    <aside>
+      <noscript>
+        <div class="noscript-warning">
+          <p>
+            JavaScript is disabled in your browser. Please enable it to fully
+            enjoy this website.
+          </p>
+        </div>
+      </noscript>
+    </aside>
+    <main>
+      <section id="hero">
+        <!-- Hero-Image : is an image which captures all the attention -->
+        <div id="hero-content">
+          <h1>Bilbao</h1>
+        </div>
+      </section>
+      <section id="city-introduction">
+        <div id="introduction-content">
+          <h2>Welcome to Bilbao</h2>
+          <p>
+            Welcome to <strong>Bilbao</strong>, a vibrant city in northern
+            Spain, where <em>art</em> and <em>culture</em> come alive to create
+            an extraordinary journey. Known as the heart of the
+            <span
+              class="fullscreen-img"
+              data-img-src="img/places/bilbao/basque-region.png"
+            >
+              <strong>Basque Country</strong> </span
+            >, Bilbao offers visitors an unforgettable blend of
+            <strong>modern architecture</strong>,
+            <strong>rich traditions</strong>, exquisite cuisine, and a lively
+            atmosphere. From the iconic
+            <span
+              class="fullscreen-img"
+              data-img-src="img/places/bilbao/guggenheim-museum.avif"
+              >Guggenheim Museum</span
+            >
+            to the charming streets of
+            <span
+              class="fullscreen-img"
+              data-img-src="img/places/bilbao/casco-viejo3.jpg"
+              >Casco Viejo</span
+            >, Bilbao is a city waiting to be discovered and
+            <em>enjoyed at every turn</em>.
+          </p>
+
+          <p>
+            Whether you're here for a <strong>culinary adventure</strong>, an
+            <strong>inspiring journey</strong> through contemporary art, or a
+            <strong>relaxing escape</strong> into the green hills and river
+            fronts, Bilbao has something for everyone. Get ready to immerse
+            yourself in a city where <em>tradition meets modernity</em>, all set
+            against the stunning backdrop of the
+            <strong>Basque landscape</strong>.
+          </p>
+        </div>
+      </section>
+      <section id="cities-beauties">
+        <ul>
+          <li>
+            <article class="image-item-content">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/san-anton-bridge.jpg"
+                  alt="San Anton Bridge"
+                />
+                <figcaption>San Anton Bridge</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>San Anton Bridge: An Icon of Bilbao</h2>
+                <p>
+                  The <strong>San Anton Bridge</strong> , gracefully spanning
+                  the<span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/nervion-river.jpg"
+                    ><strong>Nervión River</strong>
+                  </span>
+                  , is a symbol of Bilbao's historic and cultural identity.
+                  Built in the medieval era, this iconic structure has served as
+                  a crucial connection for trade and travel, linking the city's
+                  bustling markets and neighborhoods. Its enduring presence is
+                  so significant that it is proudly featured on Bilbao's
+                  <strong>coat of arms</strong>, embodying centuries of
+                  resilience and community spirit.
+                </p>
+                <p>
+                  Crossing the
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/san-anton-bridge2.jpg"
+                  >
+                    <strong>San Anton Bridge</strong>
+                  </span>
+                  offers breathtaking views of Bilbao's charming
+                  <strong>Casco Viejo</strong> (Old Town), where narrow streets
+                  meet vibrant architecture. Whether a history enthusiast or a
+                  casual traveler, this bridge invites you to immerse yourself
+                  in the rich tapestry of Bilbao's past and present.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content , reverse">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/basilica-begona1.avif"
+                  alt="Begona Basilica"
+                />
+                <figcaption>Begona Basilica</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Begona Basilica: A Sacred Sanctuary</h2>
+                <p>
+                  Perched on a hill that offers a stunning view of Bilbao, the
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/begona-basilica3.jpg"
+                    ><strong>Begona Basilica</strong></span
+                  >
+                  is a revered pilgrimage site. Dedicated to the
+                  <a
+                    href="https://en.wikipedia.org/wiki/Our_Lady_of_Bego%C3%B1a"
+                    >Virgin of Begona</a
+                  >, the patron saint of Biscay, it holds deep spiritual
+                  significance for locals and visitors alike.
+                </p>
+                <p>
+                  The basilica's
+                  <strong>Gothic-Renaissance architecture</strong> is a striking
+                  blend of styles, featuring intricate details and soaring
+                  arches. Visitors can also enjoy breathtaking panoramic views
+                  of Bilbao and its surroundings, making it a perfect spot for
+                  both reflection and exploration.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/plaza-unamuno-miguel.avif"
+                  alt="Plaza Unamuno Miguel"
+                />
+                <figcaption>Plaza Unamuno Miguel</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Plaza Unamuno Miguel: A Cultural Hub</h2>
+                <p>
+                  The
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/plaza-unamuno-miguel.avif"
+                    ><strong>Plaza Unamuno Miguel</strong></span
+                  >
+                  is a lively and vibrant square located in the heart of
+                  Bilbao’s
+                  <strong>Casco Viejo</strong>. It is named after the renowned
+                  philosopher
+                  <a href="https://en.wikipedia.org/wiki/Miguel_de_Unamuno"
+                    ><strong>Miguel de Unamuno</strong></a
+                  >, whose intellectual legacy deeply influenced the city and
+                  its people.
+                </p>
+                <p>
+                  Surrounded by charming shops and cozy cafés, the plaza is a
+                  central hub of activity, offering a mix of historical and
+                  modern influences. As a gateway to Bilbao’s dynamic cultural
+                  scene, it is a perfect place to experience the city's energy
+                  and heritage, whether you're strolling through or enjoying a
+                  local coffee.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content , reverse">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/plaza-berria2.jpg"
+                  alt="Plaza Berria"
+                />
+                <figcaption>Plaza Berria</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Plaza Berria: A Vibrant Gathering Spot</h2>
+                <p>
+                  The
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/plaza-berria3.jpg"
+                    ><strong>Plaza Berria</strong></span
+                  >
+                  is a lively and bustling square located in the heart of
+                  Bilbao's
+                  <strong>Casco Viejo</strong>, where both locals and visitors
+                  gather to experience the city's rich atmosphere. This charming
+                  square is a focal point for those looking to immerse
+                  themselves in the lively spirit of the old town.
+                </p>
+                <p>
+                  Surrounded by traditional taverns and
+                  <strong>pintxo</strong> bars, Plaza Berria is an ideal place
+                  to relax and savor local delicacies such as
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/bacalao-a-la-vizcaina.webp"
+                    ><strong>bacalao a la vizcaína</strong></span
+                  >
+                  (cod in Vizcayan sauce),
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/chistorra.jpg"
+                    ><strong>chistorra</strong></span
+                  >
+
+                  (a type of sausage), and
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/tortilla-de-bacalao.jpg"
+                    ><strong>tortilla de bacalao</strong></span
+                  >
+                  (salted cod omelette). Whether you're enjoying a drink or
+                  sampl
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content">
+              <div class="image">
+                <figure>
+                  <img
+                    src="img/places/bilbao/arriaga-theatre5.jpg"
+                    alt="Arriaga Theatre"
+                  />
+                  <figcaption>Arriaga Theatre</figcaption>
+                </figure>
+              </div>
+
+              <div class="item-content">
+                <h2>Arriaga Theatre: A Cultural Icon</h2>
+                <p>
+                  The
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/arriaga-theatre2.jpg"
+                    ><strong>Arriaga Theatre</strong></span
+                  >
+                  is an architectural masterpiece in Bilbao, renowned for its
+                  stunning neoclassical design. As one of the city’s most
+                  important cultural landmarks, it hosts a variety of
+                  performances, including <strong>opera</strong>,
+                  <strong>theater</strong>, and
+                  <strong>classical music concerts</strong>, attracting
+                  audiences from around the world.
+                </p>
+                <p>
+                  Named after the Basque composer
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/juan-crisostomo-arriaga.jpg"
+                    ><strong>Juan Crisóstomo Arriaga</strong></span
+                  >, often referred to as the "<a
+                    href="https://en.wikipedia.org/wiki/Juan_Cris%C3%B3stomo_Arriaga"
+                    >Spanish Mozart</a
+                  >," the theatre stands as a tribute to his legacy. It is an
+                  essential destination for those passionate about the
+                  <strong>performing arts</strong> and offers a glimpse into the
+                  rich cultural heritage of Bilbao.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content , reverse">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/dona-casilda-park2.jpg"
+                  alt="Dona Casilda Park"
+                />
+                <figcaption>Dona Casilda Park</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Dona Casilda Park: A Green Oasis</h2>
+                <p>
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/dona-casilda-park.jpg"
+                    ><strong>Dona Casilda Iturrizar Park</strong></span
+                  >
+                  is a peaceful haven in the heart of Bilbao, offering a serene
+                  escape from the city's hustle and bustle. The park is known
+                  for its lush gardens, a tranquil pond, and elegant fountains
+                  that create a calming atmosphere.
+                </p>
+                <p>
+                  A popular spot for both locals and visitors, the park is ideal
+                  for a leisurely stroll, a relaxing picnic, or simply enjoying
+                  the beauty of nature. Its combination of greenery and peaceful
+                  surroundings makes it a perfect place to unwind and appreciate
+                  the outdoors in the midst of the city.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/bilbao-fine-arts-museum1.avif"
+                  alt="Bilbao Fine Arts Museum"
+                />
+                <figcaption>Bilbao Fine Arts Museum</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Bilbao Fine Arts Museum: Artistic Treasures</h2>
+                <p>
+                  The
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/bilbao-fine-arts-museum2.avif"
+                    ><strong>Bilbao Fine Arts Museum</strong></span
+                  >
+                  is home to a remarkable collection of Spanish and European
+                  art, showcasing masterpieces that span centuries. The museum's
+                  extensive galleries feature works from renowned artists,
+                  offering a journey through the evolution of art from the
+                  <strong>Renaissance</strong> to
+                  <strong>contemporary art</strong>.
+                </p>
+                <p>
+                  Whether you’re drawn to
+                  <strong>classical paintings</strong> or
+                  <strong>modern sculptures</strong>, the museum provides a
+                  comprehensive experience for art lovers. Its impressive
+                  exhibits make it a must-visit destination for anyone
+                  interested in exploring the rich artistic heritage of Spain
+                  and beyond.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content , reverse">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/playa-de-sopelana1.jpg"
+                  alt="Playa de Sopelana"
+                />
+                <figcaption>Playa de Sopelana</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>Playa de Sopelana: A Coastal Paradise</h2>
+                <p>
+                  Located just outside Bilbao, the
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/playa-de-sopelana2.jpg"
+                    ><strong>Playa de Sopelana</strong></span
+                  >
+                  is a breathtaking beach that attracts visitors with its golden
+                  sands and scenic views. Known for its excellent
+                  <strong>surfing conditions</strong>, it is a popular spot for
+                  both beginners and experienced surfers.
+                </p>
+                <p>
+                  Whether you seek a relaxing day by the water or an adventure
+                  on the waves, Playa de Sopelana offers a perfect escape from
+                  the bustling city life. The beach’s natural beauty and
+                  tranquil atmosphere make it an ideal destination for outdoor
+                  enthusiasts and those looking to unwind.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="image-item-content">
+              <figure class="image">
+                <img
+                  src="img/places/bilbao/san-juan-de-gaztelugatxe3.jpg"
+                  alt="San Juan de Gaztelugatxe"
+                />
+                <figcaption>San Juan de Gaztelugatxe</figcaption>
+              </figure>
+
+              <div class="item-content">
+                <h2>San Juan de Gaztelugatxe: A Dramatic Island</h2>
+                <p>
+                  The
+                  <span
+                    class="fullscreen-img"
+                    data-img-src="img/places/bilbao/san-juan-de-gaztelugatxe5.jpg"
+                    ><strong>San Juan de Gaztelugatxe</strong></span
+                  >, famously featured in
+                  <a href="https://www.youtube.com/watch?v=HvVkBlEGj7M"
+                    ><em>Game of Thrones</em></a
+                  >
+                  and
+                  <a href="https://www.youtube.com/watch?v=DotnJ7tTA34"
+                    ><em>House Of The Dragons</em></a
+                  >, is a dramatic island located off the Biscay coast. A church
+                  sits atop the island, perched on rugged cliffs and surrounded
+                  by the stunning beauty of the sea.
+                </p>
+                <p>
+                  Accessible by a winding stone staircase, the journey to the
+                  church offers breathtaking views of the coastline and a sense
+                  of adventure. This iconic site, with its rich history and
+                  spectacular surroundings, is a must-visit for those seeking
+                  both natural beauty and a touch of drama.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <!--
+      <section id="city-video">
+        <h2>A video about the city</h2>
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/watch?v=Biu4ksqOjDs"
+        >
+        </iframe>
+      </section>
+      -->
+      <section class="city-cheat-card">
+        <h2>Bilbao City Cheat Card</h2>
+        <table class="styled-table">
+          <tr>
+            <th>Feature</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Popular Tourist Areas</td>
+            <td>Casco Viejo, Abandoibarra, Indautxu, Deusto, Getxo</td>
+          </tr>
+          <tr class="active-row">
+            <td>Historical Sites</td>
+            <td>
+              San Anton Bridge, Bilbao Cathedral, Arriaga Theatre, Plaza Nueva,
+              Begona Basilica
+            </td>
+          </tr>
+          <tr>
+            <td>Museums and Galleries</td>
+            <td>
+              Guggenheim Museum, Bilbao Fine Arts Museum, Euskal Museoa, La Ría
+              Maritime Museum
+            </td>
+          </tr>
+          <tr>
+            <td>Natural Attractions</td>
+            <td>
+              Dona Casilda Iturrizar Park, Mount Artxanda, Sopelana Beach,
+              Urdaibai Biosphere Reserve
+            </td>
+          </tr>
+          <tr>
+            <td>Beaches</td>
+            <td>Sopelana Beach, Plentzia Beach, Gorliz Beach, Bakio Beach</td>
+          </tr>
+          <tr>
+            <td>Festivals and Events</td>
+            <td>
+              Bilbao BBK Live, Aste Nagusia (Great Week), Basque Pelota
+              Championships, Bilbao Night Marathon
+            </td>
+          </tr>
+          <tr>
+            <td>Shopping Areas</td>
+            <td>
+              Mercado de la Ribera, Gran Vía, Casco Viejo Boutiques, Zubiarte
+              Shopping Mall
+            </td>
+          </tr>
+          <tr>
+            <td>Must-Try Local Foods</td>
+            <td>
+              Pintxos, Bacalao al Pil-Pil, Marmitako, Txangurro, Idiazabal
+              Cheese
+            </td>
+          </tr>
+          <tr>
+            <td>Nightlife</td>
+            <td>Casco Viejo, Abando, Pozas Street, Indautxu Bars and Clubs</td>
+          </tr>
+          <tr>
+            <td>Scenic Spots</td>
+            <td>
+              Guggenheim Promenade, Mount Artxanda Viewpoint, San Juan de
+              Gaztelugatxe, Zubizuri Bridge
+            </td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/">
+            <img src="/img/icons/insta.png" alt="instagram-logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/">
+            <img src="/img/icons/facebook.png" alt="facebook-logo" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
