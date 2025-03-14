@@ -1,3 +1,7 @@
+:root {
+  --primary-color: rgb(183, 230, 235);
+}
+
 /* ====== Header ====== */
 
 nav ul {
@@ -7,11 +11,11 @@ nav ul {
 }
 
 header nav a {
-  color: rgb(183, 230, 235);
+  color: var(--primary-color);
 }
 
 header nav a:hover {
-  background-color: rgb(183, 230, 235);
+  background-color: var(--primary-color);
   color: rgb(59, 59, 59);
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -76,12 +80,16 @@ p {
 
 li p a {
   text-decoration: none;
-  color: rgb(91, 3, 91);
+  color: rgb(120, 10, 120);
 }
 
-.internal-link {
+.ancre {
   text-decoration: none;
-  color: rgb(91, 3, 91);
+  color: rgb(91, 12, 91);
+}
+
+.ancre:hover {
+  text-decoration: underline;
 }
 
 .display-none {

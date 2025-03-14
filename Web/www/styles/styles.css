@@ -1,3 +1,9 @@
+:root {
+  --primary-color: rgb(255, 251, 0);
+  --secondary-color: rgb(202, 243, 240);
+  --dark-text: rgb(68, 67, 67);
+}
+
 body {
   background: linear-gradient(0deg, rgb(202, 243, 240), rgb(66 94 193));
 }
@@ -43,18 +49,19 @@ body {
 
 #hero-content a {
   text-decoration: none;
-  background-color: rgb(255, 251, 0);
+  background-color: var(--primary-color);
   padding: 0.75rem 1.5rem;
   color: black;
   font-size: 1.5rem;
   font-weight: 700; /*bold*/
   border-radius: 8px;
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  transition: all 0.3s ease-in-out;
 }
 
 #hero-content a:hover,
 #hero-content a:focus {
-  background-color: rgb(255, 238, 0);
+  background-color: var(--primary-color);
 }
 
 #highlights {

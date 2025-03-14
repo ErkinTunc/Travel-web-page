@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="/styles/forms/forms-shared.css" />
     <link rel="stylesheet" href="/styles/forms/chatbox.css" />
     <!-- JavaScript -->
-    <script src="//code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js" defer></script>
     <script src="js/forms/chatbox.js" defer></script>
     <title>Travel Page</title>
   </head>
@@ -101,39 +101,35 @@
         <section>
           <!--READ MESSAGES-->
           <ul id="read-messages">
-            <li>
-              <article class="container">
-                <p class="message">Message1</p>
+            <li class="container">
+              <p class="message">Message1</p>
 
-                <div class="message-information">
-                  <span class="username">Erkin</span>
-                  <span class="msg-time">12.30</span>
-                  <span class="msg-date">28.11.2024</span>
-                </div>
-              </article>
+              <div class="message-information">
+                <span class="username">Erkin</span>
+                <span class="msg-time">12.30</span>
+                <span class="msg-date">28.11.2024</span>
+              </div>
             </li>
 
-            <li>
-              <article class="container darker">
-                <p class="message">Message2</p>
+            <li class="container darker">
+              <p class="message">Message2</p>
 
-                <div class="message-information">
-                  <span class="username">Erkin</span>
-                  <span class="msg-time">12.30</span>
-                  <span class="msg-date">28.11.2024</span>
-                </div>
-              </article>
+              <div class="message-information">
+                <span class="username">Erkin</span>
+                <span class="msg-time">12.30</span>
+                <span class="msg-date">28.11.2024</span>
+              </div>
             </li>
           </ul>
         </section>
         <section>
           <!--SEND MESSAGE-->
           <form action="/htbin/chatsend.py" method="POST" novalidate>
-            <fieldset>
+            <div>
               <label for="msg">Your Message :</label>
               <textarea name="msg" id="msg" rows="5" required></textarea>
-              <button type="submit">SEND</button>
-            </fieldset>
+            </div>
+            <button type="submit">SEND</button>
           </form>
         </section>
       </div>

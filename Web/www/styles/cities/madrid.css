@@ -106,10 +106,10 @@ header a {
 .close {
   /*Use JS to add the class*/
   position: fixed;
-  top: 0.9375rem;
-  right: 2.1875rem;
+  top: 15px;
+  right: 35px;
   color: #f1f1f1;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
@@ -334,7 +334,7 @@ header a {
 }
 
 .card__like {
-  width: 1.125rem;
+  width: 18px;
 }
 
 .card__clock {
@@ -359,14 +359,14 @@ header a {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 14.6875rem;
+  height: 235px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
 .card__info-hover {
   position: absolute;
-  padding: 1rem;
+  padding: 16px;
   width: 100%;
   opacity: 0;
   top: 0;
@@ -379,7 +379,7 @@ header a {
   background-repeat: no-repeat;
   width: 100%;
   position: absolute;
-  height: 14.6875rem;
+  height: 235px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   top: 0;
@@ -390,7 +390,7 @@ header a {
   background-color: #fff;
   width: 33.3%;
   position: relative;
-  border-radius: 1.5625rem;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
@@ -410,20 +410,20 @@ header a {
 .card__category {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 0.125rem;
+  font-size: 13px;
+  letter-spacing: 2px;
   font-weight: 500;
   color: #868686;
 }
 
 .card__title {
-  margin-top: 0.3125rem;
-  margin-bottom: 0.625rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-family: "Roboto Slab", serif;
 }
 
 .card__by {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
 }

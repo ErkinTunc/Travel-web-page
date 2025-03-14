@@ -2,12 +2,6 @@
   justify-content: center;
 }
 
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
 .login-result-message {
   width: 30rem;
   margin: 2rem auto;
@@ -23,8 +17,8 @@ fieldset {
 }
 
 .login-failed {
-  color: #ff0f0f;
-  background-color: #ff8383;
+  color: #b30000;
+  background-color: #ffb3b3;
 }
 
 #registerParagraph {
