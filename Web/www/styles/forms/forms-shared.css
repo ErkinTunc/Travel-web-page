@@ -14,8 +14,7 @@ h1 {
 }
 
 form {
-  width: 90%;
-  max-width: 30rem;
+  width: 30rem;
   margin: 2rem auto;
   background-color: rgb(255, 255, 255);
   padding: 1rem;
@@ -23,8 +22,8 @@ form {
 }
 
 label {
-  margin-top: 1rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
   display: block;
 }
 
@@ -70,7 +69,6 @@ button {
 button:hover {
   background-color: rgb(76, 25, 113);
   border-color: rgb(76, 25, 113);
-  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 48.5rem) {

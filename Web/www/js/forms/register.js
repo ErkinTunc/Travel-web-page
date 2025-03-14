@@ -209,11 +209,13 @@ SendForm = function (event) {
   }
 
   console.log("All validations passed:", isValid);
+
 };
 
 // Submit form when Enter key is pressed
 function submitEnterKey(event) {
   if (event.key === "Enter") {
+
     // Check if the currently focused element is part of the form
     if (
       event.target === inputUsername ||
