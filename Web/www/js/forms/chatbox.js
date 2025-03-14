@@ -31,7 +31,6 @@ function processMessages(messages) {
   for (const msgObj of messages) {
     //Creation of Elements
     let MessageListElement = document.createElement("li");
-    let MessageArticle = document.createElement("article");
     let MessageElement = document.createElement("p");
     let InfoDiv = document.createElement("div");
     let DateElement = document.createElement("span");
@@ -62,9 +61,8 @@ function processMessages(messages) {
     InfoDiv.appendChild(UsernameElement);
     InfoDiv.appendChild(TimeElement);
     InfoDiv.appendChild(DateElement);
-    MessageArticle.appendChild(MessageElement);
-    MessageArticle.appendChild(InfoDiv);
-    MessageListElement.appendChild(MessageArticle);
+    MessageListElement.appendChild(MessageElement);
+    MessageListElement.appendChild(InfoDiv);
     chatbox.appendChild(MessageListElement);
   }
 }
@@ -168,5 +166,5 @@ function sendUserMessage(event) {
 
 // INITIALIZE
 document.addEventListener("DOMContentLoaded", fetchChatMessages);
-setInterval(fetchChatMessages, 1000); // Fetch messages every 5 seconds
+//setInterval(fetchChatMessages, 1000); // Fetch messages every 5 seconds
 form.addEventListener("submit", sendUserMessage);

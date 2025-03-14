@@ -7,7 +7,8 @@ p {
 }
 
 #chat-box {
-  width: 30rem;
+  width: 90%;
+  max-width: 30rem;
   margin: 2rem auto;
   background-color: rgb(255, 255, 255);
   padding: 1rem;
@@ -17,9 +18,9 @@ p {
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 0.625rem;
-  margin: 0.625rem 0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .darker {
@@ -39,12 +40,6 @@ form {
   margin: auto 1%;
   background-color: rgb(255, 255, 255);
   padding: 1rem 0;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
 }
 
 textarea {

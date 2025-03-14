@@ -1,3 +1,11 @@
+:root {
+  --primary-color: rgb(255, 251, 0);
+  --dark-text: rgb(77, 77, 77);
+  --light-text: rgb(253, 239, 213);
+  --background-dark: rgb(24, 24, 24);
+  --background-drawer: rgb(29, 26, 27);
+}
+
 body {
   font-family: "Comfortaa", sans-serif;
 }
@@ -45,7 +53,7 @@ header li {
 }
 
 header a {
-  color: rgb(255, 251, 0);
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1.25rem;
   padding: 0.75rem;
@@ -58,8 +66,8 @@ header a {
 
 header nav a:hover,
 header nav a:focus {
-  color: rgb(77, 77, 77);
-  background-color: rgb(255, 251, 0);
+  color: var(--dark-text);
+  color: var(--primary-color);
   padding: 0.5rem 1rem;
 }
 
@@ -75,7 +83,7 @@ header nav a:focus {
 .menu-btn span {
   display: block;
   width: 100%;
-  height: 0.1875rem;
+  height: 3px;
   background-color: rgb(255, 251, 0);
 }
 
@@ -83,7 +91,7 @@ header nav a:focus {
 #side-drawer {
   width: 100%;
   height: 100%;
-  background-color: rgb(29, 26, 27);
+  background-color: var(--background-drawer);
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +143,7 @@ footer ul {
 footer li {
   width: 5rem;
   height: 5rem;
-  margin: 0 3.125rem;
+  margin: 0px 3.125rem;
 }
 
 footer img {
