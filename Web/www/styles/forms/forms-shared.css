@@ -7,6 +7,11 @@ header a {
   background-color: transparent;
 }
 
+header nav a:hover, header nav a:focus {
+  background-color: rgb(183, 230, 235);
+  color: rgb(59, 59, 59);
+}
+
 h1 {
   text-align: center;
   color: white;

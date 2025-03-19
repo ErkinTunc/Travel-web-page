@@ -53,6 +53,7 @@ body {
 .image-item-content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin: 2rem 0;
 }
 
@@ -100,6 +101,10 @@ body {
 @media (max-width: 68.75rem) {
   #cities-beauties {
     width: 90%;
+  }
+
+  p{
+    font-size: 1.4rem;
   }
 }
 

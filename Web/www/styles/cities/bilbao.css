@@ -72,6 +72,7 @@ header a {
 .image-item-content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin: 2rem 0 2rem 0;
 }
 
@@ -100,6 +101,12 @@ header a {
 }
 
 /*----------Media-Queries------------*/
+
+@media (max-width: 68rem) {
+  p {
+    font-size: 1.4rem;
+  }
+}
 
 @media (max-width: 64rem) {
   /*1024px*/
