@@ -1,12 +1,12 @@
 # Travel-Web-Page
 
-## 🌍 Overview
+## Overview
 
 **Travel-Web-Page** is a website dedicated to showcasing touristic sites. Designed with a focus on user interactivity and responsive design, it serves as a learning project to develop and refine front-end web development skills. To maintain a pure learning experience, no frameworks are used.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Responsive Design**: Optimized for seamless viewing on all devices.  
 - **User Interaction**: Includes interactive elements managed through JavaScript and DOM manipulation.  
@@ -18,14 +18,14 @@
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 You can view the live demo of the website here:  
 [Travel-Web-Page on Netlify](https://travel-goals-page.netlify.app) (without server-side)
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Navigate to the project folder.  
 2. Start the Python HTTP server:
@@ -37,7 +37,7 @@ You can view the live demo of the website here:
     http://localhost:****
 - Replace **** with the port number.
 
-## 🌟 Coding Standards
+## Coding Standards
 This project adheres to the following coding principles:
 
 - Validation: All HTML5 and CSS3 files are validated using the W3C Validator.
@@ -45,13 +45,13 @@ This project adheres to the following coding principles:
 - Accessibility: Designed for usability by users with visual impairments, including those with color blindness. Tested with color simulation tools (e.g., Protanopia, Deuteranopia).
 - Responsive Design: Achieved with Flexbox and Media Queries for adaptability to various screen sizes.
 
-## 🛠️ Technologies Used
+## Technologies Used
 - HTML5: Semantic and accessible markup.
 - CSS3: Styling and layout.
 - JavaScript: For dynamic interactivity.
 - AJAX: Used for dynamic features like the chatbox and login system
 
-## 📋 Form Validation
+## Form Validation
 The website includes advanced form validation written in JavaScript (without jQuery), ensuring real-time feedback for users. The following rules are enforced:
 
 1. Name: Cannot be empty.
@@ -66,17 +66,17 @@ The website includes advanced form validation written in JavaScript (without jQu
    
 JavaScript validates fields dynamically, and the form cannot be submitted until all criteria are met.
 
-## 🔄 Dynamic Features
+## Dynamic Features
 - Login System: Uses AJAX to dynamically validate credentials via the `login.py` server script.
 - Chatbox: Powered by AJAX to enable real-time messaging with JSON responses.
 
-## 🎨 Accessibility
+## Accessibility
 To ensure accessibility:
 
 - Color Blindness: The design is tested for compatibility with Protanopia, Deuteranopia, Tritanopia, and other conditions.
 - Fallbacks: If JavaScript is disabled, users are notified using the `<noscript>` tag.
 
-## 📜 License
+## License
 This project uses the following library:
 
 - normalize.css v8.0.1
@@ -84,7 +84,7 @@ This project uses the following library:
      normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
 All other assets are custom-made for this project.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 Feel free to open issues, suggest new features, or submit pull requests.
