@@ -92,8 +92,7 @@ body {
 
 .destination a:hover,
 .destination a:focus {
-  font-size: xx-large;
-  transform: scale(1.1); /* Slightly scale up the link */
+  transform: scale(1.02); /* Slightly scale up the link */
   transition: all 0.3s ease; /* Smooth transition for the effect */
 }
 
@@ -117,7 +116,10 @@ body {
 }
 
 .destination a {
+  display: block;
   text-decoration: none;
+
+  transition: transform 0.3s ease;
 }
 
 /*----------Media-Queries------------*/
