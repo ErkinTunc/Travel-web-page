@@ -142,8 +142,11 @@ Through this project, I practiced:
 
 This project uses:
 
-- normalize.css v8.0.1  
+- normalize.css v8.0.1
+
+```bash
   MIT License | github.com/necolas/normalize.css
+```
 
 All other assets are custom-made.
 
